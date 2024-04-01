@@ -1,0 +1,271 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    nav{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+    }
+    nav ul{
+        float: right;
+        margin-right: 20px;
+    }
+    nav ul li {
+         display: inline-block;
+       margin: 20px;
+
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+        nav ul li a:hover{
+        text-decoration: hover;
+        color: rgb(153, 153, 226);
+        font-size: 1.09rem;
+
+    }
+    .left{
+
+        font-size: 1.5rem;
+    }
+
+    .firstSection{
+        display: flex;
+        justify-content: space-around;
+        
+        margin: 80px 0;
+        
+    }
+    .firstSection > div{
+        width: 30%;
+    }
+
+    .leftSection{
+       
+        font-size: 2.4rem;
+        margin: 30px 0;
+    }
+    .rightSection img{
+        width: 132%;
+        margin: 0px 10;
+    }
+    .purple{
+         color: rgb(170, 107, 228);
+    }
+    #element{
+        color: rgb(170, 107, 228);
+    }
+    .secondSection{
+        max-width: 80vw;
+        margin: auto;
+
+    }
+    
+
+    /*---------------------------------about---------------------------------------*/
+    #about{
+        padding: 80px 0;
+        color: #ababab;
+    }
+    .about-col-1{
+        flex-basis: 35%;
+    }
+    .about-col-1 img{
+        width: 200px;
+        height: 300px;
+        border-radius: 15px;
+
+    }
+    .about-col-2{
+        flex-basis: 35%;
+    }
+    .row{
+        display: flex;
+        padding: 50px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .sub-title{
+        font-size: 42px;
+        font-weight: 600;
+        color: #fff;
+        
+
+    }
+/*---------------------------------Projects---------------------------------------*/
+#projects{
+    padding: 20px 50px;
+    
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(153, 153, 226);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color:  rgb(149, 149, 199);
+    font-size: 40px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*----------------------------------Contact-Us-------------------------------------->*/
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+    
+}
+.contact-left p{
+    margin-top: 30px;
+
+    
+}
+.contact-left p i{
+    color: rgb(153, 153, 226);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a :hover{
+    color: rgb(153, 153, 226);
+    transform: translate(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: rgb(153, 153, 226);
+}
+contact-right form{
+    width: 100%;
+
+
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.btn.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyrigh i{
+    color: rgb(153, 153, 226);
+}
+/*----------------------------------Css for Small Screen----------------------1:33:04---------------->*/
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+
+    .right-text{
+        margin-top: 100%;
+        font-size: 16px;
+        color: rgb(0, 0, 33);
+    }
+    .right-text h1{
+        font-size: 30px;
+
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: rgb(65, 65, 96);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 180px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+       display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+#msg{
+    color:rgb(109, 232, 109) ;
+    margin-top: -5px;
+    display: block;
+}
