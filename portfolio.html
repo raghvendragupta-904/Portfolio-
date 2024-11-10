@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raghvendra - Developer Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+       
+<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet"href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+    <body>
+        <header>
+            <nav>
+                <div class="left">Raghvendra Portfolio</div>
+                <div class="right">
+                    <ul id="sidemenu">
+
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="home">
+                <div class="container">
+            <section class="firstSection">
+                <div class="leftSection">Hi my name is<span class="purple"> Raghvendra Gupta</span> 
+                    <div>and I am a passionate</div>
+                    
+                    <span id="element"></span>
+                </div>
+                <div class="rightSection">
+                    <img src="bg.png" alt="">
+                </div>
+            </div>
+
+            </div>
+            </section>
+
+<!----------------------------------About-------------------------------------->
+            <section class="secondSection"></section>
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="my.jpg" alt="Pls-Reload🤔"></div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me </h1>
+                            <p>Welcome to my portfolio! 
+                                I'm a passionate and innovative Raghvendra Gupta, 
+                                dedicated to pushing the boundaries of creativity and problem-solving. 
+                                With a strong foundation in Web Devlopment & Android Devlopment, 
+                                I thrive on turning ideas into reality and crafting solutions that leave a lasting impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!----------------------------------Projects-------------------------------------->
+<div id="projects">
+    <div class="container">
+         <h1 class="sub-title">Projects</h1>
+         
+
+         <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Android')">Android</p>
+            <p class="tab-links" onclick="opentab('Website')">Website</p>
+         </div>
+         <div class="tab-contents active-tab" id="Android">
+            <ul>
+                <li><span>Photo Modifier</span><br></li>
+                <p><span>This software provides a user-friendly interface, allowing individuals to enhance, edit, and transform their photos effortlessly. With features like filters, cropping, and color adjustments, Photo Editor caters to both beginners and advanced users, offering a seamless experience for creative expression and professional image enhancement. Elevate your photos with this all-encompassing editing solution. This is Android Application for use Technology Java & XML </span></p>
+            </ul>
+         </div>
+         <div class="tab-contents"id="Website">
+            <ul>
+                <li><span>Portfolio</span><br></li>
+                <p>Welcome to "Protfolio" ? your gateway to a captivating digital showcase of creativity and achievements. This project website is a meticulously crafted platform designed for individuals eager to curate their professional journey. With intuitive navigation, sleek design, and customizable templates, Protfolio empowers you to effortlessly build a stunning online portfolio that reflects your skills, experiences, and aspirations. Showcase your work, highlight accomplishments, and leave a lasting impression with this dynamic and user-friendly portfolio creation tool. Elevate your online presence with Protfolio ? where your story meets design.</p>
+            </ul>
+         </div>
+    </div>
+</div>
+<!----------------------------------Contact-Us-------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> raghvendra735513@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i> 7355139746</p>
+                <div class="social-icons">
+                <a href="https://www.facebook.com/raghvendra.gupta.904?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/raghvendra.gupta.904?utm_source=qr&igshid=NGExMmI2YTkyZg=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/raghvendra-gupta-80899821b"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://wa.link/31b9vx"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="Raghvendra Gupta.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © 904. Made with ♥️ by Raghvendra Gupta</p>
+    </div>
+</div>
+        </main>
+<!----------------------------------Java script-------------------------------------->
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+              strings: ['Graphic Designer', 'Android Developer','Web Designer','Web Developer'],
+              typeSpeed: 50,
+            });
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+          </script>
+
+          <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+          </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzhw3ONb0RV5gD3ZRT-uEaqxLwi779-_UcWkZ4URXkJFotMmC6cQgqT4ItR-MjY6CIsqw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+          
+    </body>
+</html>
